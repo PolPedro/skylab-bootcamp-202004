@@ -42,7 +42,6 @@ export default function Register({chatId, userName, userId, onGoToChat}) {
     useEffect (() => {
         const interval = setInterval(() => {
             update()
-            console.log('hola')
         }, 1000)
 
         return () => clearInterval(interval)

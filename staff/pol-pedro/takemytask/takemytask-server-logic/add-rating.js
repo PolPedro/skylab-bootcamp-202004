@@ -25,7 +25,7 @@ module.exports = (userId, ratedId, stars) => {
 
         if (!user) throw new UnexistenceError(`worker with id ${userId} dont exists`)
 
-        const rates = await Worker.findOne({"ratesWorker.userId": ObjectId(userId) })
+        const rates = await Worker.findOne({_id: ObjectId(ratedId), "ratesWorker.userId": ObjectId(userId) })
 
         if(rates){
 
